@@ -1,4 +1,4 @@
-export type Role = "user" | "client";
+export type Role = "user";
 export type Question = {
   id: string;
   text: string;
@@ -11,13 +11,24 @@ export type Quiz = {
   slug: string;
   title: string;
   category: string;
+
+  
+  description?: string;
+  imageUrl?: string;
+
+  likes: number;
+  games: number;
+
+  
   difficulty?: "easy" | "medium" | "hard";
   cover?: string;
-  questions: Question[];
-  status: "draft" | "published";
-  plays: number;
-  creatorId: string;
-  createdAt: string;
+  questions?: Question[];
+  status?: "draft" | "published";
+  plays?: number;
+  creatorId?: string;
+  createdAt?: string;
+  author?: string;
+  play?: string;
 };
 export type LeaderboardEntry = {
   user: string;
